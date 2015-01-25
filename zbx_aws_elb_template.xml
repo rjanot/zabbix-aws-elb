@@ -143,12 +143,51 @@
                     <valuemap/>
                 </item>
                 <item>
-                    <name>AWS Number Of Elastic Load Balancers With Out Of Service Pool Members</name>
+                    <name>AWS Number Of Out Of Service Pool Members</name>
                     <type>2</type>
                     <snmp_community></snmp_community>
                     <multiplier>0</multiplier>
                     <snmp_oid></snmp_oid>
                     <key>num_out_of_service</key>
+                    <delay>0</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts></allowed_hosts>
+                    <units></units>
+                    <delta>0</delta>
+                    <snmpv3_securityname></snmpv3_securityname>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authpassphrase></snmpv3_authpassphrase>
+                    <snmpv3_privpassphrase></snmpv3_privpassphrase>
+                    <formula>1</formula>
+                    <delay_flex></delay_flex>
+                    <params></params>
+                    <ipmi_sensor></ipmi_sensor>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username></username>
+                    <password></password>
+                    <publickey></publickey>
+                    <privatekey></privatekey>
+                    <port></port>
+                    <description></description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>AWS ELB Information</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                </item>
+                <item>
+                    <name>AWS Number Of InService Pool Members</name>
+                    <type>2</type>
+                    <snmp_community></snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid></snmp_oid>
+                    <key>num_in_service</key>
                     <delay>0</delay>
                     <history>90</history>
                     <trends>365</trends>
