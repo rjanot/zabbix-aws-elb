@@ -20,6 +20,7 @@ def main():
     elbs = conn.get_all_load_balancers()
     total_elbs = len(elbs)
     outofservice = 0
+    inservice = 0
     outofservice_elbs = []
     outofservice_instance = []
     for elb in elbs:
@@ -29,6 +30,8 @@ def main():
                 outofservice = outofservice +1
                 outofservice_elbs.append(elb.name)
                 outofservice_instance.append(inst_h.instance_id)
+            else:
+                inservice = inservice + 1
 
     if not outofservice_elbs:
        outofservice_elbs = 'none'
@@ -36,6 +39,7 @@ def main():
        outofservice_instance = 'none'
 
     outofservice = str(outofservice)
+    inservice = str(inservice)
     total_elbs = str(total_elbs)
     outofservice_elbs = str(outofservice_elbs).strip('[]').strip('u')
     outofservice_instance = str(outofservice_instance).strip('[]').strip('u')
@@ -44,7 +48,8 @@ def main():
     print (args.name+' num_out_of_service ' +outofservice)
     print (args.name+' elbs_with_out_of_service_instances ' +outofservice_elbs)
     print (args.name+' instance_id ' +outofservice_instance)
+    print (args.name+' num_in_service ' +inservice)
 
 
 if __name__ == "__main__":
-    main() 
+    main()
